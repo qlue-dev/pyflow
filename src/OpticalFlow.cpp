@@ -946,12 +946,12 @@ void OpticalFlow::Coarse2FineFlow(DImage &vx, DImage &vy, DImage &warpI2,const D
 	// first build the pyramid of the two images
 	GaussianPyramid GPyramid1;
 	GaussianPyramid GPyramid2;
-	// if(IsDisplay)
-	// 	cout<<"Constructing pyramid...";
+	if(IsDisplay)
+		cout<<"Constructing pyramid...";
 	GPyramid1.ConstructPyramid(Im1,ratio,minWidth);
 	GPyramid2.ConstructPyramid(Im2,ratio,minWidth);
-	// if(IsDisplay)
-	// 	cout<<"done!"<<endl;
+	if(IsDisplay)
+		cout<<"done!"<<endl;
 
 	// now iterate from the top level to the bottom
 	DImage Image1,Image2,WarpImage2;
